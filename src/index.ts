@@ -12,11 +12,11 @@ const port = 3000;
 app.get('/api/visitors', async (req: Request, res: Response) => {
     try {
         /* Reading the value of the query parameters */
-        Util.verifyQueryParams(req);
-        const dateInMilis = Number(req.query.date);
-        const museumToIgnore = req.query.ignore ?? '';
+        const queryDto = Util.verifyAndGetQueryParams(req);
+        //const dateInMilis = Number(req.query.date);
 
-        const date = new Date(dateInMilis);
+        const date = new Date(queryDto.date);
+        const museumToIgnore = queryDto.ignored;
         const month = date.getMonth() + 1;
         const monthName = date.toLocaleString('default', { month: 'short' });
         const year = date.getUTCFullYear();
