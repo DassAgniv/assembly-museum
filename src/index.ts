@@ -79,7 +79,6 @@ app.get('/api/visitors', async (req: Request, res: Response) => {
     } catch (err) {
         if (err instanceof AMError) res.status(err.httpStatusCode).send(err);
         else {
-            console.log(err);
             const amError = new AMError(HttpStatusCode.internalServerError, ErrorCodes.AM_ERR_InternalServerError,
                 'Internal Server Error!');
             res.status(amError.httpStatusCode).send(amError);
