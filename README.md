@@ -35,13 +35,13 @@ Query Parameters:
 Sample Response: 
 ```json
 {
-    attendance: {
-        month: 'Jul',
-        year: 2014,
-        highest: { museum: 'avila_adobe', visitors: 32378 },
-        lowest: { museum: 'hellman_quon', visitors: 120 },
-        ignored: { museum: 'visitor_center_avila_adobe', visitors: 3527 },
-        total: 57008
+    "attendance": {
+        "month": "Jul",
+        "year": 2014,
+        "highest": { "museum": "avila_adobe", "visitors": 32378 },
+        "lowest": { "museum": "hellman_quon", "visitors": 120 },
+        "ignored": { "museum": "visitor_center_avila_adobe", "visitors": 3527 },
+        "total": 57008
     }
 }
 ``` 
